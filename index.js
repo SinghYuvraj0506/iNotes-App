@@ -9,7 +9,9 @@ let port = process.env.PORT || 5000
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin: process.env.CLIENT_URL
+}))
 
 app.use(express.json())   // it is a middleware used to take req.body in json form
 
