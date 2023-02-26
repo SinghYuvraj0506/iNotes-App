@@ -5,7 +5,7 @@ const mongouri = process.env.MONGO_URI
 
 
 const connectToMongo = () =>{
-    mongoose.connect(mongouri,()=>{
+    mongoose.connect(mongouri,{useNewUrlParser:true},()=>{
         console.log("Connectd to Mongo Succesfully")
     })
 }
