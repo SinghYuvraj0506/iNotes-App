@@ -10,4 +10,9 @@ const connectToMongo = () =>{
     })
 }
 
+
+mongoose.set('strictQuery', false);
+
+
+
 module.exports= connectToMongo;
